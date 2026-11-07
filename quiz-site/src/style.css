@@ -1,0 +1,128 @@
+*{box-sizing:border-box}
+:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#192b36;background:#f4f7fa;line-height:1.6;--accent:#087b68;--border:#dce6e9;--muted:#536675;--good:#0b6946;--bad:#ad303a;--review:#85570d}
+body{margin:0}button,a,input{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;border:1px solid var(--border);background:white;color:inherit;border-radius:9px;padding:8px 15px}button:hover:not(:disabled){border-color:var(--accent)}button:disabled{opacity:.48;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #259980;outline-offset:2px}a{color:inherit;text-decoration:none}h1,h2,p{margin:0}h2{font-size:17px}
+header{background:#fff;border-bottom:1px solid var(--border)}.top,main{width:min(1180px,calc(100% - 48px));margin:auto}.top{min-height:67px;display:flex;align-items:center;gap:32px}.brand{font-weight:850;display:flex;align-items:center;gap:9px;white-space:nowrap}.logo{background:var(--accent);color:white;border-radius:9px;padding:1px 9px}.top nav{display:flex;gap:7px;flex:1}.top nav button,.subtle{border-color:transparent;background:transparent}.top nav button[aria-pressed=true]{color:var(--accent);background:#e4f4ef;font-weight:750}.subtle{color:var(--muted)}#wrong-count{font-size:12px}
+.intro{margin:24px 0 16px;border-radius:16px;background:linear-gradient(110deg,#133931,#175b50);color:white;padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:16px}.eyebrow{font-size:12px;letter-spacing:.14em;color:#a6ead9;font-weight:750}.intro h1{font-size:clamp(24px,4vw,37px);line-height:1.35;margin:6px 0}.intro p:last-child{color:#dbf0e9}.overview{display:flex;gap:26px;text-align:center}.overview strong{display:block;font-size:25px;white-space:nowrap}.overview small{color:#d6eae5;white-space:nowrap}
+.modules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}.module{text-align:left;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}.module strong{font-size:16px}.module small{color:var(--muted)}.module[aria-pressed=true]{border-color:var(--accent);background:#e8f6f2;color:#0b6355}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 305px;gap:16px;align-items:start}.card{background:white;border:1px solid var(--border);border-radius:14px;padding:22px}.q-head,.side-head,.actions,.type-row{display:flex;align-items:center;gap:8px}.q-head,.side-head{justify-content:space-between}.type-row{flex-wrap:wrap}.type-row button{font-size:13px;padding:5px 10px}.type-row button[aria-pressed=true]{background:#e4f4ef;border-color:#98d0c2;color:#0b6355;font-weight:750}.meta{margin-top:18px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}.track{height:5px;border-radius:4px;background:#ecf1f2;margin:7px 0 16px;overflow:hidden}.track i{display:block;background:#12927a;height:100%}.prompt{font-size:19px;font-weight:750;line-height:1.55;margin:12px 0 16px}.prompt,.option,.feedback{overflow-wrap:anywhere;white-space:pre-line}.options{display:grid;gap:8px}.option{display:flex;align-items:center;gap:10px;text-align:left;padding:10px 12px;width:100%;min-height:45px}.option:disabled{opacity:1}.key{display:grid;place-items:center;flex:0 0 27px;height:27px;background:#eff3f5;border-radius:7px;font-size:13px;font-weight:800}.option[aria-pressed=true]{border-color:var(--accent);background:#eef8f5}.option.good,.grid .good{border-color:#85caaa;background:#e7f7ed;color:var(--good)}.option.bad,.grid .bad{border-color:#e7a9ae;background:#fff0f1;color:var(--bad)}.grid .review{border-color:#e5c384;background:#fff5dc;color:var(--review)}.option .label{margin-left:auto;font-size:12px;font-weight:750;flex-shrink:0}.actions{margin-top:17px;flex-wrap:wrap}.primary{color:white;background:var(--accent);border-color:var(--accent);font-weight:700}.primary:hover:not(:disabled){background:#056451}.feedback{border-left:4px solid var(--accent);border-radius:8px;background:#f0f7f5;margin-top:16px;padding:12px 15px}.feedback.bad{background:#fff2f3;border-color:var(--bad)}.feedback.review{background:#fff8e9;border-color:var(--review)}.feedback p{margin-top:5px}.sidebar{padding:17px}#side-count,.hint,footer,.filter{color:var(--muted);font-size:13px}.filter{display:inline-flex;align-items:center;gap:6px;margin-top:10px}.filter input{accent-color:var(--accent)}.legend{display:flex;gap:10px;font-size:12px;color:var(--muted);margin:10px 0}.legend .good{color:var(--good)}.legend .bad{color:var(--bad)}.legend .review{color:var(--review)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(35px,1fr));gap:6px;max-height:319px;overflow:auto;padding:3px}.grid button{font-size:12px;padding:5px 1px;min-height:32px}.grid button[aria-current=true]{outline:2px solid var(--accent);outline-offset:0;font-weight:800}.hint{margin-top:12px}footer{padding:16px 0 25px}dialog{width:min(420px,calc(100% - 32px));border:1px solid var(--border);border-radius:14px;padding:20px;color:inherit}dialog p{margin-top:8px}dialog::backdrop{background:#172e35a0}.close{float:right}#notice{position:fixed;bottom:16px;right:16px;max-width:calc(100% - 32px);background:#193d36;color:white;border-radius:9px;padding:10px 16px}
+@media(max-width:800px){.workspace{grid-template-columns:minmax(0,1fr)}.grid{max-height:180px}.hint{display:none}}
+@media(max-width:520px){.top,main{width:calc(100% - 24px)}.top{gap:5px;flex-wrap:wrap;padding:8px 0}.top nav{order:3;flex:0 0 100%;justify-content:space-between}.top nav button{flex:1;white-space:nowrap;padding:6px 4px;font-size:14px}.top .subtle{margin-left:auto;padding:4px 8px}.intro{margin-top:12px;padding:15px;align-items:flex-start;flex-direction:column}.overview{width:100%;justify-content:space-between;gap:10px}.overview strong{font-size:20px}.module{display:block;padding:9px 12px}.module small{display:block}.card{padding:13px}.prompt{font-size:17px}.actions button{flex:1;white-space:nowrap;padding:7px}.q-head>button{padding:5px 8px;font-size:13px;white-space:nowrap}}
+/* Keep the answer controls anchored to the viewport across every question. */
+html {
+  scroll-padding-bottom: calc(100px + env(safe-area-inset-bottom));
+}
+main {
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+.prompt, .option, .feedback {
+  white-space: normal;
+}
+.question-toolbar {
+  position: fixed;
+  z-index: 20;
+  inset: auto 0 0;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 20px #192b360d;
+  padding: 12px 24px calc(12px + env(safe-area-inset-bottom));
+}
+.toolbar-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 700px;
+  margin: auto;
+}
+.toolbar-buttons button {
+  min-height: 46px;
+}
+.secondary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.secondary-actions:not(:empty) {
+  margin-top: 16px;
+}
+#notice {
+  bottom: calc(88px + env(safe-area-inset-bottom));
+  z-index: 30;
+}
+.search-panel {
+  margin-bottom: 16px;
+  padding: 16px 20px;
+}
+.search-panel > label {
+  display: block;
+  font-weight: 750;
+  margin-bottom: 8px;
+}
+.search-input-row {
+  display: flex;
+  gap: 8px;
+}
+.search-input-row input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 10px 12px;
+  font: inherit;
+  color: inherit;
+  background: #f9fbfc;
+}
+.search-input-row button {
+  flex-shrink: 0;
+}
+#search-count {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 8px;
+}
+.search-results {
+  display: grid;
+  gap: 8px;
+  max-height: 320px;
+  overflow: auto;
+  margin-top: 12px;
+  padding: 3px;
+}
+.search-result {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.search-result span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.search-result strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.search-empty {
+  color: var(--muted);
+  padding: 12px 0;
+}
+@media (max-width: 520px) {
+  .question-toolbar {
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  }
+  .toolbar-buttons {
+    gap: 8px;
+  }
+  .toolbar-buttons button {
+    padding: 8px;
+  }
+  .search-panel {
+    padding: 13px;
+  }
+  .search-input-row input {
+    font-size: 16px;
+  }
+  .search-input-row button {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
