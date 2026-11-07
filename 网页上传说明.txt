@@ -1,0 +1,39 @@
+灵境题库 · GitHub 网页上传说明
+
+这里已经包含 React + Vite 构建完成的网站和全部 544 道题，可以直接部署。
+
+一、创建仓库
+登录 GitHub，点击右上角 +，选择 New repository。
+仓库名可填 TiKu，选择 Public，点击 Create repository。
+
+二、用网页上传
+在空仓库页面点击 uploading an existing file。
+如果仓库已经有文件，点击 Add file → Upload files。
+打开电脑上的 tikuWeb 文件夹。
+将里面的 docs 文件夹和本说明文件一起拖入 GitHub 上传区。
+应当看到 docs/index.html 和 docs/assets/ 下的三个资源文件。
+点击页面底部 Commit changes 完成上传。
+注意上传 tikuWeb 里面的内容，网站文件应位于仓库的 docs/index.html。
+
+三、开启网站
+在 GitHub 仓库点击 Settings → Pages。
+在 Build and deployment 的 Source 中选择 Deploy from a branch。
+Branch 选择 main，文件夹选择 /docs，点击 Save。
+如果默认分支名称不是 main，请选择实际上传文件所在的分支。
+等待 Pages 发布完成，刷新 Settings → Pages，点击 Visit site。
+网址通常是 https://你的GitHub用户名.github.io/TiKu/。
+
+四、以后更新
+源码仍在原来的 quiz-site 文件夹中。
+修改源码或题库后，需要重新构建网站，再上传新构建的 docs 文件夹。
+如果只是想使用刷题网页，完成上述三步即可。
+
+上传结构
+仓库根目录
+  docs/
+    index.html
+    assets/
+      index-B2z-fBDd.js
+      questions-Dg4FuL29.js
+      index-B4-D9cV9.css
+  网页上传说明.txt
