@@ -155,6 +155,11 @@ export function quizReducer(session, action) {
       };
     case 'import':
       return resume({ ...session, progress: mergeProgress(progress, action.value) });
+    case 'reset-progress':
+      return resume({
+        ...session, mode: 'practice', unanswered: false,
+        progress: { ...fresh(), bookmarks: action.clearBookmarks ? {} : progress.bookmarks },
+      });
     default:
       return session;
   }

@@ -48,37 +48,12 @@ main {
   bottom: calc(88px + env(safe-area-inset-bottom));
   z-index: 30;
 }
-.search-panel {
-  margin-bottom: 16px;
-  padding: 16px 20px;
-}
-.search-panel > label {
-  display: block;
-  font-weight: 750;
-  margin-bottom: 8px;
-}
-.search-input-row {
-  display: flex;
-  gap: 8px;
-}
-.search-input-row input {
-  width: 100%;
-  min-width: 0;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  padding: 10px 12px;
-  font: inherit;
-  color: inherit;
-  background: #f9fbfc;
-}
-.search-input-row button {
-  flex-shrink: 0;
-}
-#search-count {
-  color: var(--muted);
-  font-size: 13px;
-  margin-top: 8px;
-}
+
+
+
+
+
+
 .search-results {
   display: grid;
   gap: 8px;
@@ -115,14 +90,211 @@ main {
   .toolbar-buttons button {
     padding: 8px;
   }
-  .search-panel {
-    padding: 13px;
+  
+  
+  
+}
+
+.top {
+  display: grid;
+  grid-template-columns: auto minmax(150px, 220px) minmax(0, 1fr);
+  gap: 16px;
+  padding: 12px 0;
+}
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.top nav {
+  gap: 3px;
+}
+.top nav button {
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+.manage-progress {
+  white-space: nowrap;
+}
+.header-search {
+  position: relative;
+  min-width: 0;
+  z-index: 40;
+}
+.search-pill {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  border: 2px solid #a6adad;
+  border-radius: 999px;
+  background: #fff;
+  overflow: hidden;
+}
+.search-pill:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px #087b681a;
+}
+.search-pill input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  padding: 5px 0 5px 12px;
+}
+.search-pill input:focus-visible {
+  outline: none;
+}
+.search-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 30px;
+  padding: 5px;
+  border: 0;
+  border-radius: 999px;
+  color: #77817f;
+}
+.search-icon svg {
+  width: 21px;
+  height: 21px;
+}
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: min(480px, calc(100vw - 24px));
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 36px #192b3626;
+}
+.search-dropdown .side-head {
+  font-size: 13px;
+}
+.search-dropdown .subtle {
+  padding: 3px 6px;
+  font-size: 13px;
+}
+.search-dropdown .search-results {
+  margin-top: 8px;
+  max-height: min(360px, 55dvh);
+}
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+.dialog-main-action {
+  margin-top: 18px;
+}
+.reset-section {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.reset-section h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.danger {
+  color: var(--bad);
+  border-color: #e7a9ae;
+}
+.exam-workspace {
+  margin-top: 20px;
+}
+.exam-clock {
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 750;
+}
+.exam-clock.urgent {
+  color: var(--bad);
+}
+.exam-result {
+  border: 1px solid #98d0c2;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 14px;
+  background: #e8f6f2;
+}
+.exam-result strong {
+  font-size: 23px;
+  color: var(--accent);
+}
+.exam-result button {
+  margin-top: 10px;
+}
+.exam-hint {
+  margin: 10px 0;
+}
+.exam-grid {
+  max-height: 370px;
+}
+.grid .answered {
+  background: #e4f4ef;
+  border-color: #98d0c2;
+}
+@media (max-width: 1080px) {
+  .top {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 10px 16px;
   }
-  .search-input-row input {
+  .header-navigation {
+    grid-column: 1 / -1;
+  }
+  .header-search {
+    width: min(260px, 100%);
+    justify-self: end;
+  }
+  .search-dropdown {
+    left: auto;
+    right: 0;
+  }
+}
+@media (max-width: 520px) {
+  .top {
+    gap: 8px 12px;
+    padding: 10px 0 8px;
+  }
+  .header-search {
+    width: 100%;
+  }
+  .search-pill input {
     font-size: 16px;
   }
-  .search-input-row button {
-    font-size: 13px;
-    padding: 8px;
+  .header-navigation {
+    gap: 3px;
   }
+  .top nav {
+    flex: 1;
+    gap: 0;
+  }
+  .top nav button {
+    padding: 7px 3px;
+    font-size: 12px;
+  }
+  .top .manage-progress {
+    margin: 0;
+    padding: 7px 3px;
+    font-size: 12px;
+  }
+  .exam-workspace {
+    margin-top: 12px;
+  }
+}
+
+.header-navigation nav {
+  order: 0;
+}
+.prompt:focus {
+  outline: none;
 }
