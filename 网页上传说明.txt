@@ -1,4 +1,4 @@
-灵境题库 · GitHub 网页上传说明
+杰哥题库 · GitHub 网页上传说明
 
 这里已经包含 React + Vite 构建完成的网站和全部 544 道题，可以直接部署。
 
@@ -33,7 +33,7 @@ Branch 选择 main，文件夹选择 /docs，点击 Save。
   docs/
     index.html
     assets/
-      index-B2z-fBDd.js
+      index-BC3ICBC_.js
       questions-Dg4FuL29.js
       index-B4-D9cV9.css
   网页上传说明.txt
