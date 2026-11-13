@@ -33,7 +33,7 @@ Branch 选择 main，文件夹选择 /docs，点击 Save。
   docs/
     index.html
     assets/
-      index-C7fGYMfD.js
-      questions-DAN0Zcxd.js
+      index-obbPOZMQ.js
+      questions-DAbuDdza.js
       index-BdtNoi3s.css
   网页上传说明.txt
