@@ -245,6 +245,20 @@ main {
 .exam-grid {
   max-height: 370px;
 }
+.exam-grid button.good {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+.exam-grid button.bad {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #fff;
+}
+.exam-grid button[aria-current=true] {
+  outline: 2px solid #192b36;
+  outline-offset: 2px;
+}
 .grid .answered {
   background: #e4f4ef;
   border-color: #98d0c2;
