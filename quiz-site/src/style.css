@@ -329,9 +329,38 @@ main {
   font-weight: 700;
 }
 .update-content {
-  padding: 18px 0;
-  font-size: 17px;
-  line-height: 1.8;
+  max-height: min(54dvh, 420px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin: 16px 0;
+  padding-right: 4px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.update-entry + .update-entry {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.update-entry h3 {
+  margin: 0;
+  font-size: 15px;
+}
+.update-entry ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+.update-entry li + li {
+  margin-top: 8px;
+}
+.update-badge {
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: #e8f6f2;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
 }
 .update-dismiss {
   width: 100%;

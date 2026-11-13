@@ -6,6 +6,7 @@ import {
 } from './quiz';
 import './style.css';
 import { ExamSetup, MockExam, useMockExam } from './MockExam';
+import { updates } from './updates';
 
 const feedbackLabels = {
   good: '回答正确',
@@ -13,7 +14,7 @@ const feedbackLabels = {
   review: '题目待核对 · 此题不计入正确率',
 };
 
-const updateNoticeVersion = '2026-11-13-corrected-answers';
+const updateNoticeVersion = updates[0].id;
 const updateNoticeStorageKey = 'jiege-update-notice-seen';
 
 function UpdateNotice({ dialog }) {
@@ -40,8 +41,15 @@ function UpdateNotice({ dialog }) {
       aria-describedby="update-notice-content" onClose={markSeen}>
       <form method="dialog"><button className="close" aria-label="关闭更新通知">×</button></form>
       <h2 id="update-notice-title">更新日志</h2>
-      <p className="muted"><time dateTime="2026-11-13">2026-11-13</time></p>
-      <p id="update-notice-content" className="update-content">更新内容：题库所有题目全部纠正为正确选项，放心食用！</p>
+      <div id="update-notice-content" className="update-content">
+        {updates.map((update, index) => (
+          <section className="update-entry" key={update.id} aria-label={update.title}>
+            <h3>{update.title}{index === 0 && <span className="update-badge">最新</span>}</h3>
+            <p className="muted"><time dateTime={update.date}>{update.date}</time></p>
+            <ul>{update.items.map(item => <li key={item}>{item}</li>)}</ul>
+          </section>
+        ))}
+      </div>
       <form method="dialog">
         <button className="primary update-dismiss" autoFocus>知道了</button>
       </form>
