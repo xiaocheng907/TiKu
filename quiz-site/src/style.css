@@ -9,7 +9,13 @@ header{background:#fff;border-bottom:1px solid var(--border)}.top,main{width:min
 @media(max-width:520px){.top,main{width:calc(100% - 24px)}.top{gap:5px;flex-wrap:wrap;padding:8px 0}.top nav{order:3;flex:0 0 100%;justify-content:space-between}.top nav button{flex:1;white-space:nowrap;padding:6px 4px;font-size:14px}.top .subtle{margin-left:auto;padding:4px 8px}.intro{margin-top:12px;padding:15px;align-items:flex-start;flex-direction:column}.overview{width:100%;justify-content:space-between;gap:10px}.overview strong{font-size:20px}.module{display:block;padding:9px 12px}.module small{display:block}.card{padding:13px}.prompt{font-size:17px}.actions button{flex:1;white-space:nowrap;padding:7px}.q-head>button{padding:5px 8px;font-size:13px;white-space:nowrap}}
 /* Keep the answer controls anchored to the viewport across every question. */
 html {
+  scroll-padding-top: 120px;
   scroll-padding-bottom: calc(100px + env(safe-area-inset-bottom));
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 main {
   padding-bottom: calc(96px + env(safe-area-inset-bottom));
