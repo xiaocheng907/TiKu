@@ -1,4 +1,5 @@
 import bank from './generated/questions.json';
+import { createQuestionSearch } from './search';
 
 export { bank };
 export const modules = { basics: '基础知识', design: '内容设计' };
@@ -47,17 +48,7 @@ export function group({ progress }) {
   return bank.filter(question => question.module === progress.module && question.type === progress.type);
 }
 
-export function searchQuestions(query) {
-  const terms = query.normalize('NFKC').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-  if (!terms.length) return [];
-  return bank.filter(question => {
-    const text = [
-      question.title, types[question.type], String(question.number), question.id,
-      question.prompt, ...question.options.map(option => option.text),
-    ].join(' ').normalize('NFKC').toLocaleLowerCase();
-    return terms.every(term => text.includes(term));
-  });
-}
+export const searchQuestions = createQuestionSearch(bank, types);
 
 export function matches({ progress, mode, unanswered }, question) {
   const record = progress.records[question.id];

@@ -1,4 +1,4 @@
-import { useEffect, useEffectEvent, useReducer, useRef, useState } from 'react';
+import { useEffect, useEffectEvent, useMemo, useReducer, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   answerStatus, bank, group, initialSession, matches, modes, modules, quizReducer,
@@ -108,7 +108,7 @@ function QuestionSearch({ onOpen }) {
   const input = useRef(null);
   const container = useRef(null);
   const active = Boolean(query.trim());
-  const results = searchQuestions(query);
+  const results = useMemo(() => searchQuestions(query), [query]);
 
   useEffect(() => {
     const close = event => {
