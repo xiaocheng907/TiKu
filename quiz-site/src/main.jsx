@@ -13,6 +13,42 @@ const feedbackLabels = {
   review: '题目待核对 · 此题不计入正确率',
 };
 
+const updateNoticeVersion = '2026-11-13-corrected-answers';
+const updateNoticeStorageKey = 'jiege-update-notice-seen';
+
+function UpdateNotice({ dialog }) {
+  useEffect(() => {
+    let seen = false;
+    try {
+      seen = localStorage.getItem(updateNoticeStorageKey) === updateNoticeVersion;
+    } catch {
+      // The notice can still be opened and dismissed when storage is unavailable.
+    }
+    if (!seen) dialog.current.showModal();
+  }, [dialog]);
+
+  function markSeen() {
+    try {
+      localStorage.setItem(updateNoticeStorageKey, updateNoticeVersion);
+    } catch {
+      // Dismissing the dialog remains available without persistent storage.
+    }
+  }
+
+  return (
+    <dialog ref={dialog} className="update-notice" aria-labelledby="update-notice-title"
+      aria-describedby="update-notice-content" onClose={markSeen}>
+      <form method="dialog"><button className="close" aria-label="关闭更新通知">×</button></form>
+      <h2 id="update-notice-title">更新日志</h2>
+      <p className="muted"><time dateTime="2026-11-13">2026-11-13</time></p>
+      <p id="update-notice-content" className="update-content">更新内容：题库所有题目全部纠正为正确选项，放心食用！</p>
+      <form method="dialog">
+        <button className="primary update-dismiss" autoFocus>知道了</button>
+      </form>
+    </dialog>
+  );
+}
+
 function QuestionCard({ session, question, index, count, done, total, dispatch, move }) {
   const { progress, mode, retry, selected, focusFeedback } = session;
   const record = question && !retry ? progress.records[question.id] : undefined;
@@ -230,6 +266,7 @@ function App() {
   const lastSaved = useRef(progress);
   const dialog = useRef(null);
   const examSetup = useRef(null);
+  const updateDialog = useRef(null);
   const mock = useMockExam(setNotice);
   const [examVisible, setExamVisible] = useState(() => Boolean(mock.exam));
   const { records } = progress;
@@ -313,6 +350,7 @@ function App() {
                 else examSetup.current.showModal();
               }}>模拟考试</button>
             </nav>
+            <button className="update-trigger" onClick={() => updateDialog.current.showModal()}>更新通知</button>
             <button className="subtle manage-progress" onClick={() => dialog.current.showModal()}>进度管理</button>
           </div>
         </div>
@@ -378,6 +416,7 @@ function App() {
         try { mock.start(); setExamVisible(true); examSetup.current.close(); }
         catch (error) { setNotice(error.message); }
       }} />
+      <UpdateNotice dialog={updateDialog} />
       <div id="notice" role="status" hidden={!notice}>{notice}</div>
     </>
   );

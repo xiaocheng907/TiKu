@@ -304,3 +304,27 @@ main {
 .prompt:focus {
   outline: none;
 }
+
+.update-trigger {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 7px 8px;
+  color: var(--accent);
+  background: #e8f6f2;
+  font-size: 13px;
+  font-weight: 700;
+}
+.update-content {
+  padding: 18px 0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+.update-dismiss {
+  width: 100%;
+}
+@media (max-width: 520px) {
+  .update-trigger {
+    font-size: 12px;
+    padding: 7px 3px;
+  }
+}
