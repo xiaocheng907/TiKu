@@ -328,3 +328,15 @@ main {
     padding: 7px 3px;
   }
 }
+@media (max-width: 360px) {
+  .header-navigation {
+    gap: 1px;
+  }
+  .top .header-navigation button {
+    font-size: 11px;
+    padding: 7px 2px;
+  }
+  #wrong-count {
+    font-size: 11px;
+  }
+}

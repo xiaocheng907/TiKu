@@ -1,0 +1,1255 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "module": "basics",
+      "key": "vr-foundation",
+      "title": "虚拟现实基础与系统组成",
+      "topics": [
+        {
+          "key": "concept",
+          "title": "概念、特征与应用",
+          "ids": [
+            "basics-11",
+            "basics-30",
+            "basics-36",
+            "basics-59",
+            "basics-119",
+            "basics-127"
+          ]
+        },
+        {
+          "key": "system-type",
+          "title": "系统类型与分布式系统",
+          "ids": [
+            "basics-15",
+            "basics-46",
+            "basics-65",
+            "basics-93",
+            "basics-112",
+            "basics-129"
+          ]
+        },
+        {
+          "key": "architecture",
+          "title": "系统组成、建模与集成",
+          "ids": [
+            "basics-35",
+            "basics-43",
+            "basics-58",
+            "basics-60",
+            "basics-73",
+            "basics-81",
+            "basics-88",
+            "basics-89",
+            "basics-116",
+            "basics-134"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "basics",
+      "key": "vr-display",
+      "title": "视觉显示、投影与感知输出",
+      "topics": [
+        {
+          "key": "perception",
+          "title": "视觉感知与立体显示原理",
+          "ids": [
+            "basics-3",
+            "basics-70",
+            "basics-107",
+            "basics-130"
+          ]
+        },
+        {
+          "key": "display-device",
+          "title": "头盔显示器与立体眼镜",
+          "ids": [
+            "basics-13",
+            "basics-48",
+            "basics-111",
+            "basics-126"
+          ]
+        },
+        {
+          "key": "projection",
+          "title": "沉浸式投影系统",
+          "ids": [
+            "basics-5",
+            "basics-55",
+            "basics-77"
+          ]
+        },
+        {
+          "key": "output",
+          "title": "效果产生与视听输出",
+          "ids": [
+            "basics-94",
+            "basics-131"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "basics",
+      "key": "vr-interaction",
+      "title": "空间跟踪、人机交互与触觉反馈",
+      "topics": [
+        {
+          "key": "tracking",
+          "title": "跟踪器原理、类型与性能",
+          "ids": [
+            "basics-91",
+            "basics-124",
+            "basics-14",
+            "basics-8",
+            "basics-97",
+            "basics-68",
+            "basics-114",
+            "basics-49",
+            "basics-23"
+          ]
+        },
+        {
+          "key": "haptic",
+          "title": "触觉、力反馈与反馈回路",
+          "ids": [
+            "basics-28",
+            "basics-99",
+            "basics-20",
+            "basics-10",
+            "basics-63",
+            "basics-100"
+          ]
+        },
+        {
+          "key": "interaction",
+          "title": "自然交互、数据手套与数据衣",
+          "ids": [
+            "basics-22",
+            "basics-135",
+            "basics-74",
+            "basics-87",
+            "basics-79",
+            "basics-82",
+            "basics-106"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "basics",
+      "key": "computer",
+      "title": "计算机硬件与操作系统",
+      "topics": [
+        {
+          "key": "os",
+          "title": "操作系统特征、功能与类型",
+          "ids": [
+            "basics-1",
+            "basics-12",
+            "basics-31",
+            "basics-53"
+          ]
+        },
+        {
+          "key": "processor",
+          "title": "软硬件、处理器与控制器",
+          "ids": [
+            "basics-21",
+            "basics-45",
+            "basics-84",
+            "basics-101"
+          ]
+        },
+        {
+          "key": "memory",
+          "title": "主存储器与辅助存储器",
+          "ids": [
+            "basics-75",
+            "basics-108"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "basics",
+      "key": "network",
+      "title": "网络通信与信息安全",
+      "topics": [
+        {
+          "key": "layers",
+          "title": "网络分层与协议、Web 信息组织",
+          "ids": [
+            "basics-2",
+            "basics-16",
+            "basics-42",
+            "basics-62",
+            "basics-104"
+          ]
+        },
+        {
+          "key": "address",
+          "title": "IP 地址、子网与域名",
+          "ids": [
+            "basics-41",
+            "basics-69",
+            "basics-103",
+            "basics-120"
+          ]
+        },
+        {
+          "key": "transmission",
+          "title": "通信系统、编码与传输介质",
+          "ids": [
+            "basics-9",
+            "basics-40",
+            "basics-61",
+            "basics-64",
+            "basics-96",
+            "basics-98",
+            "basics-117",
+            "basics-118"
+          ]
+        },
+        {
+          "key": "management",
+          "title": "网络管理、带宽与流量",
+          "ids": [
+            "basics-17",
+            "basics-18",
+            "basics-85"
+          ]
+        },
+        {
+          "key": "security",
+          "title": "网络安全、防火墙与加密",
+          "ids": [
+            "basics-76",
+            "basics-90",
+            "basics-92",
+            "basics-123"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "basics",
+      "key": "programming",
+      "title": "C# 编程基础",
+      "topics": [
+        {
+          "key": "types",
+          "title": "数据类型、常量、枚举与运算符",
+          "ids": [
+            "basics-110",
+            "basics-25",
+            "basics-109",
+            "basics-67",
+            "basics-32",
+            "basics-37",
+            "basics-83"
+          ]
+        },
+        {
+          "key": "control",
+          "title": "分支、循环与跳转",
+          "ids": [
+            "basics-6",
+            "basics-33",
+            "basics-66",
+            "basics-132",
+            "basics-115"
+          ]
+        },
+        {
+          "key": "array",
+          "title": "数组与 foreach 遍历",
+          "ids": [
+            "basics-29",
+            "basics-105",
+            "basics-26",
+            "basics-52",
+            "basics-50"
+          ]
+        },
+        {
+          "key": "oop",
+          "title": "程序入口、命名空间与面向对象",
+          "ids": [
+            "basics-78",
+            "basics-80",
+            "basics-102"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "basics",
+      "key": "project",
+      "title": "项目管理与软件开发流程",
+      "topics": [
+        {
+          "key": "project",
+          "title": "项目特点、环境与约束",
+          "ids": [
+            "basics-7",
+            "basics-19",
+            "basics-39",
+            "basics-47",
+            "basics-72",
+            "basics-125",
+            "basics-133"
+          ]
+        },
+        {
+          "key": "management",
+          "title": "战略管理与项目管理职能",
+          "ids": [
+            "basics-34",
+            "basics-57",
+            "basics-86"
+          ]
+        },
+        {
+          "key": "development",
+          "title": "瀑布、螺旋与 V 模型",
+          "ids": [
+            "basics-56",
+            "basics-113",
+            "basics-121"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "basics",
+      "key": "law",
+      "title": "法律法规、知识产权与隐私",
+      "topics": [
+        {
+          "key": "regulation",
+          "title": "安全法规、内容与产品责任",
+          "ids": [
+            "basics-4",
+            "basics-24",
+            "basics-27",
+            "basics-122"
+          ]
+        },
+        {
+          "key": "copyright",
+          "title": "虚拟现实内容与著作权",
+          "ids": [
+            "basics-38",
+            "basics-128"
+          ]
+        },
+        {
+          "key": "privacy",
+          "title": "隐私权、数据收集与侵权",
+          "ids": [
+            "basics-44",
+            "basics-51",
+            "basics-54",
+            "basics-71",
+            "basics-95"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "capture",
+      "title": "三维采集、点云与重建",
+      "topics": [
+        {
+          "key": "capture-device",
+          "title": "扫描设备、测绘系统与采集数据",
+          "ids": [
+            "design-124",
+            "design-136",
+            "design-150",
+            "design-204",
+            "design-274",
+            "design-293",
+            "design-295",
+            "design-383"
+          ]
+        },
+        {
+          "key": "station",
+          "title": "测站布局、重叠率、标靶与扫描方向",
+          "ids": [
+            "design-22",
+            "design-26",
+            "design-88",
+            "design-155",
+            "design-164",
+            "design-165",
+            "design-177",
+            "design-228",
+            "design-380",
+            "design-382"
+          ]
+        },
+        {
+          "key": "cloud-data",
+          "title": "点云概念、数据组成与坐标",
+          "ids": [
+            "design-17",
+            "design-33",
+            "design-54",
+            "design-161",
+            "design-189",
+            "design-213",
+            "design-218",
+            "design-311",
+            "design-367"
+          ]
+        },
+        {
+          "key": "cloud-format",
+          "title": "点云文件存储格式",
+          "ids": [
+            "design-53",
+            "design-73",
+            "design-236",
+            "design-323"
+          ]
+        },
+        {
+          "key": "reconstruction",
+          "title": "三维重建与模型表面信息",
+          "ids": [
+            "design-81",
+            "design-105",
+            "design-194",
+            "design-229",
+            "design-287",
+            "design-303"
+          ]
+        },
+        {
+          "key": "wrap",
+          "title": "Geomagic Wrap 功能",
+          "ids": [
+            "design-1",
+            "design-12",
+            "design-224",
+            "design-285",
+            "design-409"
+          ]
+        },
+        {
+          "key": "scene",
+          "title": "FARO SCENE 功能与格式",
+          "ids": [
+            "design-110",
+            "design-174",
+            "design-231",
+            "design-235",
+            "design-246",
+            "design-308",
+            "design-378"
+          ]
+        },
+        {
+          "key": "panorama",
+          "title": "VR 全景相机、全景图与全景视频",
+          "ids": [
+            "design-80",
+            "design-157",
+            "design-169",
+            "design-181",
+            "design-227"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "polygon",
+      "title": "Maya 多边形建模",
+      "topics": [
+        {
+          "key": "intro",
+          "title": "多边形结构与建模方式比较",
+          "ids": [
+            "design-144",
+            "design-262"
+          ]
+        },
+        {
+          "key": "operation",
+          "title": "创建、选择模式与快捷操作",
+          "ids": [
+            "design-47",
+            "design-52",
+            "design-233",
+            "design-260",
+            "design-388"
+          ]
+        },
+        {
+          "key": "sphere",
+          "title": "多边形球体",
+          "ids": [
+            "design-271",
+            "design-176",
+            "design-214",
+            "design-337",
+            "design-84",
+            "design-106"
+          ]
+        },
+        {
+          "key": "cube",
+          "title": "多边形立方体",
+          "ids": [
+            "design-316",
+            "design-269",
+            "design-397",
+            "design-267",
+            "design-327",
+            "design-127",
+            "design-32",
+            "design-356"
+          ]
+        },
+        {
+          "key": "cylinder",
+          "title": "多边形圆柱体",
+          "ids": [
+            "design-349",
+            "design-3",
+            "design-225",
+            "design-366",
+            "design-321",
+            "design-5",
+            "design-220",
+            "design-386"
+          ]
+        },
+        {
+          "key": "pipe",
+          "title": "多边形管道",
+          "ids": [
+            "design-361",
+            "design-145",
+            "design-28",
+            "design-76",
+            "design-58",
+            "design-199",
+            "design-350",
+            "design-251",
+            "design-13",
+            "design-364"
+          ]
+        },
+        {
+          "key": "plane",
+          "title": "多边形平面",
+          "ids": [
+            "design-268",
+            "design-135",
+            "design-207",
+            "design-74",
+            "design-131",
+            "design-14"
+          ]
+        },
+        {
+          "key": "toolkit",
+          "title": "建模工具包、软选择与网格编辑",
+          "ids": [
+            "design-42",
+            "design-61",
+            "design-96",
+            "design-328",
+            "design-346",
+            "design-115",
+            "design-98",
+            "design-57",
+            "design-191",
+            "design-113",
+            "design-59",
+            "design-30",
+            "design-330",
+            "design-66",
+            "design-275"
+          ]
+        },
+        {
+          "key": "boolean",
+          "title": "布尔运算",
+          "ids": [
+            "design-35",
+            "design-141"
+          ]
+        },
+        {
+          "key": "text",
+          "title": "多边形文本与挤出参数",
+          "ids": [
+            "design-60",
+            "design-299",
+            "design-171",
+            "design-276",
+            "design-259",
+            "design-16",
+            "design-230",
+            "design-122",
+            "design-244",
+            "design-40",
+            "design-114"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "surface",
+      "title": "Maya 曲线、曲面与 NURBS 建模",
+      "topics": [
+        {
+          "key": "intro",
+          "title": "曲面建模方法",
+          "ids": [
+            "design-315",
+            "design-360",
+            "design-379",
+            "design-401"
+          ]
+        },
+        {
+          "key": "nurbs-sphere",
+          "title": "NURBS 球体",
+          "ids": [
+            "design-301",
+            "design-4",
+            "design-250",
+            "design-291",
+            "design-362",
+            "design-67"
+          ]
+        },
+        {
+          "key": "nurbs-cube",
+          "title": "NURBS 立方体",
+          "ids": [
+            "design-272",
+            "design-392"
+          ]
+        },
+        {
+          "key": "nurbs-cylinder",
+          "title": "NURBS 圆柱体",
+          "ids": [
+            "design-284",
+            "design-310",
+            "design-373"
+          ]
+        },
+        {
+          "key": "nurbs-circle",
+          "title": "NURBS 圆形",
+          "ids": [
+            "design-359",
+            "design-45",
+            "design-160",
+            "design-282",
+            "design-203"
+          ]
+        },
+        {
+          "key": "ep",
+          "title": "EP 曲线与控制点",
+          "ids": [
+            "design-34",
+            "design-140",
+            "design-193",
+            "design-62"
+          ]
+        },
+        {
+          "key": "curve-tools",
+          "title": "曲线编辑、重建、偏移与连接",
+          "ids": [
+            "design-139",
+            "design-168",
+            "design-147",
+            "design-342",
+            "design-198",
+            "design-166",
+            "design-36",
+            "design-92",
+            "design-402",
+            "design-312"
+          ]
+        },
+        {
+          "key": "surface-tools",
+          "title": "曲面编辑、挤出、放样与旋转",
+          "ids": [
+            "design-217",
+            "design-247",
+            "design-264",
+            "design-353",
+            "design-8",
+            "design-109",
+            "design-190",
+            "design-100",
+            "design-252",
+            "design-279",
+            "design-300",
+            "design-376",
+            "design-256"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "material",
+      "title": "材质、纹理与着色",
+      "topics": [
+        {
+          "key": "intro",
+          "title": "材质概念、作用与类型",
+          "ids": [
+            "design-11",
+            "design-85",
+            "design-162",
+            "design-281",
+            "design-289",
+            "design-331"
+          ]
+        },
+        {
+          "key": "common",
+          "title": "颜色、透明度、环境色与自发光",
+          "ids": [
+            "design-25",
+            "design-111",
+            "design-134",
+            "design-156",
+            "design-266",
+            "design-314",
+            "design-357"
+          ]
+        },
+        {
+          "key": "specular",
+          "title": "高光、反射与通用着色参数",
+          "ids": [
+            "design-97",
+            "design-158",
+            "design-263",
+            "design-391"
+          ]
+        },
+        {
+          "key": "shader",
+          "title": "Lambert、Blinn、Phong 与各向异性材质",
+          "ids": [
+            "design-354",
+            "design-270",
+            "design-258",
+            "design-163",
+            "design-182",
+            "design-336",
+            "design-143",
+            "design-82",
+            "design-56",
+            "design-37",
+            "design-370",
+            "design-406"
+          ]
+        },
+        {
+          "key": "background",
+          "title": "背景材质、反射与阴影遮罩",
+          "ids": [
+            "design-234",
+            "design-179",
+            "design-75",
+            "design-94",
+            "design-372",
+            "design-78"
+          ]
+        },
+        {
+          "key": "standard",
+          "title": "标准曲面材质各参数卷展栏",
+          "ids": [
+            "design-399",
+            "design-183",
+            "design-239",
+            "design-151",
+            "design-280",
+            "design-375",
+            "design-377"
+          ]
+        },
+        {
+          "key": "texture",
+          "title": "纹理类型、节点与通用属性",
+          "ids": [
+            "design-7",
+            "design-21",
+            "design-43",
+            "design-48",
+            "design-108",
+            "design-200",
+            "design-292",
+            "design-298",
+            "design-326",
+            "design-400"
+          ]
+        },
+        {
+          "key": "wood",
+          "title": "木材纹理",
+          "ids": [
+            "design-15",
+            "design-123",
+            "design-173",
+            "design-277"
+          ]
+        },
+        {
+          "key": "fabric",
+          "title": "布料纹理",
+          "ids": [
+            "design-232",
+            "design-396"
+          ]
+        },
+        {
+          "key": "hypershade",
+          "title": "Hypershade 与渲染节点",
+          "ids": [
+            "design-93",
+            "design-184",
+            "design-243",
+            "design-343",
+            "design-365"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "photoshop",
+      "title": "Photoshop 图像处理",
+      "topics": [
+        {
+          "key": "interface",
+          "title": "界面、菜单栏、工具箱与面板",
+          "ids": [
+            "design-9",
+            "design-119",
+            "design-394",
+            "design-175",
+            "design-188",
+            "design-172",
+            "design-205",
+            "design-248",
+            "design-390",
+            "design-278",
+            "design-339",
+            "design-167"
+          ]
+        },
+        {
+          "key": "document",
+          "title": "新建、打开、保存、关闭与撤销",
+          "ids": [
+            "design-294",
+            "design-297",
+            "design-24",
+            "design-302",
+            "design-154",
+            "design-69",
+            "design-125",
+            "design-120"
+          ]
+        },
+        {
+          "key": "file-format",
+          "title": "图像格式与保存用途",
+          "ids": [
+            "design-38",
+            "design-95",
+            "design-101",
+            "design-107",
+            "design-223",
+            "design-408"
+          ]
+        },
+        {
+          "key": "pixel",
+          "title": "像素、位图、矢量图与分辨率",
+          "ids": [
+            "design-348",
+            "design-149",
+            "design-288",
+            "design-196",
+            "design-254",
+            "design-371",
+            "design-253"
+          ]
+        },
+        {
+          "key": "color",
+          "title": "色彩、通道、亮度与饱和度",
+          "ids": [
+            "design-71",
+            "design-117",
+            "design-226",
+            "design-245"
+          ]
+        },
+        {
+          "key": "rgb",
+          "title": "RGB 模式",
+          "ids": [
+            "design-242",
+            "design-313"
+          ]
+        },
+        {
+          "key": "cmyk",
+          "title": "CMYK 模式",
+          "ids": [
+            "design-104",
+            "design-286",
+            "design-385"
+          ]
+        },
+        {
+          "key": "hsb",
+          "title": "HSB 模式",
+          "ids": [
+            "design-197",
+            "design-209",
+            "design-324"
+          ]
+        },
+        {
+          "key": "lab",
+          "title": "Lab 模式",
+          "ids": [
+            "design-68",
+            "design-29",
+            "design-355",
+            "design-206",
+            "design-344"
+          ]
+        },
+        {
+          "key": "gray",
+          "title": "灰度模式",
+          "ids": [
+            "design-219",
+            "design-237"
+          ]
+        },
+        {
+          "key": "rectangle",
+          "title": "矩形与椭圆选框",
+          "ids": [
+            "design-152",
+            "design-332",
+            "design-79",
+            "design-210",
+            "design-70"
+          ]
+        },
+        {
+          "key": "lasso",
+          "title": "磁性套索",
+          "ids": [
+            "design-112"
+          ]
+        },
+        {
+          "key": "wand",
+          "title": "魔棒工具",
+          "ids": [
+            "design-49",
+            "design-393",
+            "design-395"
+          ]
+        },
+        {
+          "key": "pen",
+          "title": "钢笔、路径与锚点",
+          "ids": [
+            "design-2",
+            "design-55",
+            "design-129",
+            "design-369"
+          ]
+        },
+        {
+          "key": "crop",
+          "title": "裁剪工具",
+          "ids": [
+            "design-46"
+          ]
+        },
+        {
+          "key": "tools",
+          "title": "工具使用与快捷键",
+          "ids": [
+            "design-212",
+            "design-317",
+            "design-358",
+            "design-389"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "engine",
+      "title": "引擎基础、场景操作与资源编辑",
+      "topics": [
+        {
+          "key": "tool",
+          "title": "虚拟现实引擎与创作工具",
+          "ids": [
+            "design-41",
+            "design-405"
+          ]
+        },
+        {
+          "key": "project",
+          "title": "项目、关卡、新建目录与项目设置",
+          "ids": [
+            "design-51",
+            "design-133",
+            "design-325",
+            "design-384",
+            "design-87",
+            "design-241"
+          ]
+        },
+        {
+          "key": "editor",
+          "title": "关卡编辑器与工具编辑器",
+          "ids": [
+            "design-19",
+            "design-72",
+            "design-273"
+          ]
+        },
+        {
+          "key": "actor",
+          "title": "Actor、Pawn、Character、GameMode 与蓝图",
+          "ids": [
+            "design-170",
+            "design-132",
+            "design-159",
+            "design-64",
+            "design-146",
+            "design-215",
+            "design-153",
+            "design-50"
+          ]
+        },
+        {
+          "key": "viewport",
+          "title": "视口导航、环绕、平移与 WASD",
+          "ids": [
+            "design-180",
+            "design-341",
+            "design-20",
+            "design-187",
+            "design-374",
+            "design-265",
+            "design-404",
+            "design-296"
+          ]
+        },
+        {
+          "key": "transform",
+          "title": "平移、旋转、缩放工具快捷键",
+          "ids": [
+            "design-240",
+            "design-283",
+            "design-305",
+            "design-334"
+          ]
+        },
+        {
+          "key": "static-mesh",
+          "title": "静态网格、三角剖分、枢轴与 LOD",
+          "ids": [
+            "design-352",
+            "design-77",
+            "design-195",
+            "design-99",
+            "design-340",
+            "design-363",
+            "design-347",
+            "design-368",
+            "design-31",
+            "design-83",
+            "design-102",
+            "design-398",
+            "design-118"
+          ]
+        },
+        {
+          "key": "material-editor",
+          "title": "材质编辑器与节点快捷键",
+          "ids": [
+            "design-211",
+            "design-322",
+            "design-338",
+            "design-39",
+            "design-86",
+            "design-89"
+          ]
+        },
+        {
+          "key": "media",
+          "title": "媒体播放编辑器",
+          "ids": [
+            "design-116",
+            "design-18",
+            "design-44",
+            "design-345",
+            "design-216"
+          ]
+        },
+        {
+          "key": "particle",
+          "title": "级联粒子编辑器",
+          "ids": [
+            "design-65",
+            "design-320"
+          ]
+        },
+        {
+          "key": "sprite",
+          "title": "Paper2D 图片编辑器",
+          "ids": [
+            "design-309"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "camera",
+      "title": "虚拟摄像机与后期效果",
+      "topics": [
+        {
+          "key": "camera",
+          "title": "摄像机用法、动画与预览",
+          "ids": [
+            "design-27",
+            "design-130",
+            "design-403"
+          ]
+        },
+        {
+          "key": "details",
+          "title": "Details 面板与后期参数",
+          "ids": [
+            "design-10",
+            "design-91",
+            "design-137",
+            "design-148",
+            "design-178",
+            "design-185",
+            "design-222",
+            "design-238",
+            "design-249",
+            "design-261",
+            "design-333",
+            "design-407"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "design",
+      "key": "performance",
+      "title": "渲染、光照与性能优化",
+      "topics": [
+        {
+          "key": "overview",
+          "title": "美术资源与关卡优化综合题",
+          "ids": [
+            "design-6",
+            "design-90",
+            "design-103",
+            "design-208",
+            "design-221",
+            "design-290",
+            "design-304"
+          ]
+        },
+        {
+          "key": "lighting",
+          "title": "光照类型、阴影、光照函数与 IES",
+          "ids": [
+            "design-121",
+            "design-329",
+            "design-138",
+            "design-201",
+            "design-202",
+            "design-23",
+            "design-128",
+            "design-142",
+            "design-318",
+            "design-307"
+          ]
+        },
+        {
+          "key": "culling",
+          "title": "模型拆分、遮蔽裁剪与渲染距离",
+          "ids": [
+            "design-186",
+            "design-351",
+            "design-387"
+          ]
+        },
+        {
+          "key": "geometry",
+          "title": "法线贴图、UV 与模型硬边",
+          "ids": [
+            "design-192",
+            "design-306"
+          ]
+        },
+        {
+          "key": "texture",
+          "title": "天空盒、贴图分辨率与贴图格式",
+          "ids": [
+            "design-63",
+            "design-126",
+            "design-257",
+            "design-335"
+          ]
+        },
+        {
+          "key": "shading",
+          "title": "着色模式与透明材质开销",
+          "ids": [
+            "design-255",
+            "design-319",
+            "design-381"
+          ]
+        }
+      ]
+    }
+  ]
+}

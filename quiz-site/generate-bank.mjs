@@ -54,7 +54,38 @@ const bank = modules.flatMap(([module, title, file, expected, singles]) => {
   return questions.sort((a, b) => a.number - b.number);
 });
 
+// Display order is separate from source numbers and IDs used by saved progress.
+const order = JSON.parse(readFileSync(new URL('./question-order.json', import.meta.url), 'utf8'));
+if (order.version !== 1 || !Array.isArray(order.categories)) throw Error('题序分类文件格式异常');
+const byId = new Map(bank.map(question => [question.id, question]));
+const orderedBank = [];
+const seen = new Set();
+const categoryKeys = new Set();
+for (const category of order.categories) {
+  const categoryKey = category.module + '-' + category.key;
+  if (!modules.some(([module]) => module === category.module) || !category.key || !category.title ||
+      categoryKeys.has(categoryKey) || !Array.isArray(category.topics) || !category.topics.length) {
+    throw Error('题序分类异常 ' + categoryKey);
+  }
+  categoryKeys.add(categoryKey);
+  const topicKeys = new Set();
+  for (const topic of category.topics) {
+    if (!topic.key || !topic.title || topicKeys.has(topic.key) || !Array.isArray(topic.ids) || !topic.ids.length) {
+      throw Error('知识点分类异常 ' + categoryKey);
+    }
+    topicKeys.add(topic.key);
+    for (const id of topic.ids) {
+      const question = byId.get(id);
+      if (!question || question.module !== category.module || seen.has(id)) throw Error('题序含未知、跨模块或重复题目 ' + id);
+      seen.add(id);
+      orderedBank.push({ ...question, category: category.title, topic: topic.title });
+    }
+  }
+}
+const missing = bank.filter(question => !seen.has(question.id));
+if (missing.length) throw Error('题序遗漏题目 ' + missing.map(question => question.id).join('、'));
+
 const output = new URL('./src/generated/', import.meta.url);
 mkdirSync(output, { recursive: true });
-writeFileSync(new URL('questions.json', output), JSON.stringify(bank));
-console.log('已生成 ' + bank.length + ' 道题。');
+writeFileSync(new URL('questions.json', output), JSON.stringify(orderedBank));
+console.log('已按 ' + order.categories.length + ' 个类别生成 ' + orderedBank.length + ' 道题。');

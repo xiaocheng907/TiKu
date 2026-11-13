@@ -83,7 +83,10 @@ function QuestionCard({ session, question, index, count, done, total, dispatch, 
       </div>
       {question ? (
         <>
-          <div className="meta">第 {index + 1} / {count} 题 · 原题号 {question.number} · {types[question.type]}</div>
+          <div className="meta">
+            第 {index + 1} / {count} 题 · 原题号 {question.number} · {types[question.type]}
+            <span title={question.category}> · {question.topic}</span>
+          </div>
           <div className="track" aria-hidden="true"><i style={{ width: (100 * done / total) + '%' }} /></div>
           <h2 className="prompt" ref={heading} tabIndex={-1}>{question.prompt}</h2>
           <div className="options" role="group" aria-label="选项">
