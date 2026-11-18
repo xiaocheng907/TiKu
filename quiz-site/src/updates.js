@@ -1,6 +1,15 @@
 // Newest release first. Use a new ID for each published update.
 export const updates = [
   {
+    id: '2026-11-18-basics-answer-followup',
+    date: '2026-11-18',
+    title: '基础知识答案补充修正',
+    items: [
+      '答案修正：原题号 120 改为 B（16），保留与通常 IP 地址位数定义不同的说明。',
+      '答案修正：原题号 131 改为 A（实景仿真器），同步解析及模拟考试判分。',
+    ],
+  },
+  {
     id: '2026-11-18-vr-content-law-answer',
     date: '2026-11-18',
     title: '基础知识答案修正',
