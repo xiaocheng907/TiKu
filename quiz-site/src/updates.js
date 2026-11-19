@@ -1,6 +1,12 @@
 // Newest release first. Use a new ID for each published update.
 export const updates = [
   {
+    id: '2026-11-19-point-cloud-judgment',
+    date: '2026-11-19',
+    title: '内容设计判断题修正',
+    items: ['答案修正：判断第 3 题（原题号 150）改为 B“正确”，同步解析；第 5 题仍为 A“正确”。'],
+  },
+  {
     id: '2026-11-18-basics-answer-followup',
     date: '2026-11-18',
     title: '基础知识答案补充修正',
