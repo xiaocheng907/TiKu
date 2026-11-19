@@ -139,6 +139,7 @@ export function MockExam({ controller, onNew }) {
           ))}
         </div>
         <p className="muted exam-hint">模拟成绩单独保存，可返回专项练习后继续本卷。</p>
+        <p className="hint">Q/W/E/D 对应 A/B/C/D · ← / → 切题</p>
       </aside>
       <dialog ref={submitDialog} aria-labelledby="exam-submit-title">
         <h2 id="exam-submit-title">确认交卷？</h2>

@@ -14,6 +14,8 @@ const feedbackLabels = {
   review: '题目待核对 · 此题不计入正确率',
 };
 
+const optionShortcuts = { Q: 'A', W: 'B', E: 'C', D: 'D' };
+
 const updateNoticeVersion = updates[0].id;
 const updateNoticeStorageKey = 'jiege-update-notice-seen';
 
@@ -116,6 +118,7 @@ function QuestionCard({ session, question, index, count, done, total, dispatch, 
             <div className="toolbar-buttons">
               <button disabled={index === 0} onClick={() => move(-1)}>上一题</button>
               <button className="primary" disabled={!record && !selected}
+                title={record ? '重做（Z）' : '确定（空格）'} aria-keyshortcuts={record ? 'Z' : 'Space'}
                 onClick={() => dispatch(record ? { type: 'retry', value: true } : { type: 'submit', at: Date.now() })}>
                 {record ? '重做' : '确定'}
               </button>
@@ -298,21 +301,31 @@ function App() {
   }
 
   const handleKey = useEffectEvent(event => {
-    if (document.querySelector('dialog[open]') || event.ctrlKey || event.metaKey || event.altKey ||
+    if (event.defaultPrevented || event.isComposing || document.querySelector('dialog[open]') ||
+      event.ctrlKey || event.metaKey || event.altKey ||
       event.target.closest?.('input, textarea, select, [contenteditable]')) return;
     const key = event.key.toUpperCase();
+    const option = optionShortcuts[key];
     if (examVisible && mock.exam) {
-      if (/^[A-D]$/.test(key)) mock.pick(key);
-      if (event.key === 'ArrowLeft') mock.go(mock.exam.index - 1);
-      if (event.key === 'ArrowRight') mock.go(mock.exam.index + 1);
+      if (option) { event.preventDefault(); mock.pick(option); }
+      if (event.key === 'ArrowLeft') { event.preventDefault(); mock.go(mock.exam.index - 1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); mock.go(mock.exam.index + 1); }
+      // Exam choices are saved immediately; Space must not activate the submit-paper button.
+      if (event.key === ' ' && (event.target === document.body ||
+        event.target.closest?.('.question, .exam-grid'))) event.preventDefault();
       return;
     }
-    if (/^[A-D]$/.test(key)) dispatch({ type: 'pick', key });
-    if (event.key === 'Enter' && !event.target.closest?.('button, a')) {
-      dispatch({ type: 'submit', at: Date.now() });
+    if (option) { event.preventDefault(); dispatch({ type: 'pick', key: option }); }
+    if (key === 'Z') {
+      event.preventDefault();
+      if (records[current] && !session.retry) dispatch({ type: 'retry', value: true });
     }
-    if (event.key === 'ArrowLeft') move(-1);
-    if (event.key === 'ArrowRight') move(1);
+    if (event.key === ' ') {
+      event.preventDefault();
+      if (!event.repeat) dispatch({ type: 'submit', at: Date.now() });
+    }
+    if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
   });
 
   useEffect(() => {
@@ -412,7 +425,7 @@ function App() {
                       onClick={() => dispatch({ type: 'go', id: question.id })}>{i + 1}</button>
                   ))}
                 </div>
-                <p className="hint">键盘快捷键　A–D 选项 · Enter 提交<br />← / → 切题</p>
+                <p className="hint">Q/W/E/D 对应 A/B/C/D<br />空格 确定 · Z 重做 · ← / → 切题</p>
               </aside>
             </section>
           </>

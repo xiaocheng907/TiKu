@@ -1,6 +1,12 @@
 // Newest release first. Use a new ID for each published update.
 export const updates = [
   {
+    id: '2026-11-19-keyboard-shortcuts',
+    date: '2026-11-19',
+    title: '答题快捷键优化',
+    items: ['Q/W/E/D 分别选择 A/B/C/D，练习中空格确认、Z 重做，左右方向键继续切题；模拟考试同步选项快捷键。'],
+  },
+  {
     id: '2026-11-19-point-cloud-judgment',
     date: '2026-11-19',
     title: '内容设计判断题修正',
